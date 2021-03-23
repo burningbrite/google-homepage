@@ -1,0 +1,1 @@
+Yulia's first coding project. Google homepage. Designed to test understanding of basic HTML and CSS principles.
