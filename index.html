@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <style>
-    nav {
+    body {
         width: 100vw;
+    }
+    nav {
+        width: 100%;
     }
     li {
         list-style-type: none;
@@ -12,38 +15,98 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
         padding-left: 5px;
-        margin-top: 15px;
+        margin-top: 10px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
     }
     .nav-left {
         display: flex;
+        align-items: center;
         margin-top: 9px;
     }
    .nav-right {
        display: flex;
        justify-content: flex-end;
-       font-size: 14px;
+       align-items: center;
+       font-size: 13px;
        margin-top: 9px;
-       padding-right: 5px;
 
    }
+ #apps {
+     height: 20px;
+     width: 20px;
+     
+ }
 #sign-in {
-    background-color: aqua;
+    background-color: rgb(25, 112, 241);
+    padding: 9px 25px 9px 25px;
+    border-radius: 7%;
+    font-size: 15px;
+
+}
+a {
+    text-decoration: none;
+    color: black ;
 }
     
     .logo {
         display: block;
         margin: auto;
     }
-    .searchbar {
-        display: block;
-        margin:auto;
-        height: 30px;
-        width: 500px;
-        border-width: 0.2px;
-        border-style:solid;
-    }
+    .search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.searchterm {
+    width: 40%;
+    height: 30px;
+    margin-top: 20px;  
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer-nav {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    background-color: rgb(238, 236, 236);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.footer-location {
+    grid-area: 1/1/2/3;
+    display: flex;
+    height: 50px;
+    align-items:center;
+    border-bottom-style: solid;
+    border-color: rgb(206, 204, 204);
+    border-width: 1px;
+}
+.footer-left {
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+
+}
+.footer-right {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
 </style>
 
 
@@ -55,39 +118,70 @@
         <ul>
             <div class="nav-left">
             <li>
-                <a>About</a>
+                <a href="#">About</a>
             </li>
             <li>
-                <a>Store</a>
+                <a href="#">Store</a>
             </li>
         </div>
         <div class="nav-right">
             <li>
-                <a>Gmail</a>
+                <a href="#">Gmail</a>
             </li>
             <li>
-                <a>Images</a>
+                <a href="#">Images</a>
             </li>
             <li>
-                <a>Apps</a>
+                <a href="#" ><img id="apps" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" alt="Google apps logo"></a>
             </li>
             <li>
-                <a id="sign-in">Sign in</a>
+                <a href="#" id="sign-in" style="color:white; text-decoration: none;">Sign in</a>
             </li>
         </div>
         </ul>
     </nav>
-    <div>
+    <h1>
     <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" width="272px" height="92px">
-    <form class="searchbar">
-        <button type="submit">
-            <i class="fa fa-search"></i>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchterm">
+            <button type="submit" class="searchButton1"></button>
+            <button type="submit" class="searchButton2"></button>   
+        </div>
+    
+    </div>    
+</h1>
 
-        </button>
-        <input type="text" name="search">
-    </form>
-</div>
 <footer>
+    <ul class="footer-nav">
+    <div class="footer-location">
+            <li>
+            <a style="color: rgb(167, 165, 165);">United Kingdom</a>
+            </li>
+    </div>        
+    <div class="footer-left" >
+        <li>
+            <a style="color: rgb(136, 136, 136);">Advertising</a>
+        </li>
+        <li>
+            <a style="color: rgb(136, 136, 136);">Business</a>
+        </li>
+        <li>
+            <a style="color: rgb(136, 136, 136);">How Search works</a>
+        </li>
+    </div>
+    <div class="footer-right">
+        <li>
+            <a style="color: rgb(136, 136, 136);">Privacy</a>
+        </li>
+        <li>
+            <a style="color: rgb(136, 136, 136);">Terms</a>
+        </li>
+        <li>
+            <a style="color: rgb(136, 136, 136);">Settings</a>
+        </li>
+    </div>   
+    </ul>
 
 </footer>
 </body>
